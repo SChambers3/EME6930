@@ -1,0 +1,144 @@
+
+body{
+    font-family: Tahoma,sans-serif;
+    font-weight: 100;
+    color:black;
+    text-align:center;
+    max-width:100%;
+    margin:0 auto;
+    flex:1;
+}
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+    margin:0 auto;
+}
+.column{
+    float:left;
+    height:1000px;
+
+    
+}
+  header{
+    z-index:1;
+    width:100%;
+    height: 30px;
+    background-color:#23408f;
+    align-content:center;
+  }
+/*navigation bar*/
+.nav{
+    float:left;
+    width:20%;   
+    background-color:white;
+    color:#23408f;
+   
+
+}
+
+/*navigation menu*/
+.nav a {
+    padding: 8px 16px;
+    text-decoration:none;
+    font-size:25px;
+    color: #23408f;
+    display:block;
+    text-align:center;
+}
+/*navigation hover*/
+.nav a:hover {
+    background-color:#00aeef;
+}
+.nav a.active{
+    color:#00aeef;
+    
+}
+.heading{
+    width:1%;
+    background-color:#23408f;
+    align-content:center;
+}
+
+/*About School*/
+.about {
+    float:left;
+    width:77%;
+    background-color:white;
+
+}
+h1 {
+    font-weight: 400;
+    color:#23408f;
+    text-shadow: 2px 2px rgba(77, 77, 77, 0.5);  
+}
+.flex{
+    display:flex; 
+}
+h2{
+    font-weight:300;
+    color:white;
+    background-color:#23408f;
+    padding: 5px 5px;
+}
+h3{
+    font-weight:200;
+    color:white;
+    text-align:center;
+}
+p{
+    padding:15px;
+    text-align:left;
+}
+form{
+    text-align:center;
+    padding:10px;
+    margin:0 auto;
+
+}
+#logo{
+    height:90px;
+    float: left;
+    margin-left: 280px;
+    margin-top:5px;
+    display:flex;
+}
+footer{
+    color:white;
+    height:30px;
+    z-index:1;
+    clear:both;
+    width:100%;
+    background-color:#23408f;
+    align-content:center;
+}
+#schools img{
+    width:300px;
+
+}
+#waterstone{
+    display:none;
+}
+#airbase{
+    display:none;
+}
+#somerset{
+    display:none;
+}
+#campbell{
+    display:none;
+}
+#gateway{
+    display:none;
+}
+#homesteadmiddle{
+    display:none;
+}
+#homesteadhigh{
+    display:none;
+}
+#keys{
+    display:none;
+}#chambers{
+    display:none;
+}
