@@ -50,13 +50,13 @@
                 <label for="fname">First name:</label>
                 <input type="text" id="fname" name="fname" placeholder="John">
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Doe">
+                <input type="text" id="lname" name="lname" placeholder="Doe"><br>
                 <label for="email">Email address:</label>
-                <input type="email" id="email" name="email" placeholder="abc@myemail.com"><br><br>
-                <label for="tel">Telephone Number</label>
+                <input type="email" id="email" name="email" placeholder="abc@myemail.com"><br>
+                <label for="tel">Telephone Number:</label>
                 <input type="tel" id="tel" name="tel" placeholder="123-456-7890">
                 <label for="DOB">Date of Birth:</label>
-                <input type="date" id="DOB" name="DOB">
+                <input type="date" id="DOB" name="DOB"><br>
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender">
                     <option value="male">male</option>
@@ -78,8 +78,8 @@
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
-                </select><br><br>
-                
+                </select>
+                <label for="school">School Choice:</label>
                 <select id="switch" name="switch" onchange="switchImage(); switchInfo();">
                     <option value="1">Waterstone Elementary</option>
                     <option value="2">Airbase Elementary</option>
@@ -98,59 +98,10 @@
 
             </form> 
 <!--School Info Section-->
-                <p id="waterstone">   
-                    Waterstone Elementary<br>
-                    (305) 248-6206<br>
-                    855 Waterstone Way<br>
-                    Homestead, FL 33033<p>
+                <p id="info">
 
-                <p id="airbase">
-                    Airbase Elementary<br>
-                    (305) 258-3676<br>
-                    12829 SW 272nd St<br>
-                    Homestead, FL 33032</p>
+                </p>
 
-                <p id="somerset">
-                    Somerset Elementary<br>
-                    (305) 245-6108<br>
-                    300 SE 1st Dr<br>
-                    Homestead, FL 33030</p>
-
-                <p id="campbell">
-                    Campbell Drive<br>
-                    (305) 245-0270<br>
-                    15790 SW 307th St<br>
-                    Homestead, FL 33033</p>
-
-                <p id="gateway">
-                    Gateway Environmental<br>
-                    (305) 257-6000<br>
-                    955 SE 18th Ave<br>
-                    Homestead, FL 33035</p>
-
-                <p id="homesteadmiddle">
-                    Homestead Middle School<br>
-                    (305) 247-4221<br>
-                    650 NW 2nd Ave<br>
-                    Homestead, FL 33030</p>
-
-                <p id="homesteadhigh">
-                    Homestead High School<br>
-                    (305) 245-7000)<br>
-                    2351 SE 12th Ave<br>
-                    Homestead, FL 33035</p>
-
-                <p id="keys">
-                    Keys Gate<br>
-                    (305) 230-1616<br>
-                    2000 SE 28th Ave<br>
-                    Homestead, FL 33035</p>
-
-                <p id="chambers">
-                    Chambers High School<br>
-                    (305) 909-6307<br>
-                    698 N Homestead Blvd<br>
-                    Homestead, FL 33030</p>
   
             <img src="images/school01.jpg" name="myImage" alt="Waterstone Elementary School">
 <!--Javascript Section - change school image when school dropdown changes-->                       
@@ -164,7 +115,37 @@
                 function switchImage() {
                     var selectedImage = document.myForm.switch.options[document.myForm.switch.selectedIndex].value;
                     document.myImage.src = imageList[selectedImage].src;
-
+                }
+                function switchInfo(){
+             
+                    if (imageList[i].src = "images/school01.jpg"){
+                        document.getElementsById("info").innerhtml = 
+                        "Waterstone Elementary<br>(305) 248-6206<br>855 Waterstone Way<br>Homestead, FL 33033<br>";
+                    }   else if (imageList[i].src = "images/school02.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Airbase Elementary<br>(305) 258-3676<br>12829 SW 272nd St<br>Homestead, FL 33032";
+                    }   else if (imageList[i].src = "images/school03.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Somerset Elementary<br>(305) 245-6108<br>300 SE 1st Dr<br>Homestead, FL 33030";
+                    }   else if (imageList[i].src = "images/school04.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Campbell Drive<br>(305) 245-0270<br>15790 SW 307th St<br>Homestead, FL 33033";
+                    }   else if (imageList[i].src = "images/school05.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Gateway Environmental<br>(305) 257-6000<br>955 SE 18th Ave<br>Homestead, FL 33035";
+                    }   else if (imageList[i].src = "images/school06.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Homestead Middle School<br>(305) 247-4221<br>650 NW 2nd Ave<br>Homestead, FL 33030";
+                    }   else if (imageList[i].src = "images/school07.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Homestead High School<br>(305) 245-7000)<br>2351 SE 12th Ave<br>Homestead, FL 33035";
+                    }   else if (imageList[i].src = "images/school08.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Keys Gate<br>(305) 230-1616<br>2000 SE 28th Ave<br>Homestead, FL 33035";
+                    }   else if(imageList[i].src = "images/school09.jpg"){
+                        document.getElementsById("info").innerhtml =
+                        "Chambers High School<br>(305) 909-6307<br>698 N Homestead Blvd<br>Homestead, FL 33030";
+                    }
 
                 }
 
@@ -176,7 +157,6 @@
 </div>
 
 
-
 <footer>
 	Copyright &copy; 2021, Sandra Chambers
 </footer>
@@ -184,43 +164,3 @@
 </html> 
 
 
-<!--javascript function attempts to have the school info display with the dropdown menu
-
-                    function switchInfo(){
-                    var tableList = Array();
-                for (var y = 1; y <= 9; y++){
-                    tableList[y] = new table;
-                    var x = document.getElementsByClassName("1","2","3","4","5","6","7","8","9");
-                    if (x = y) {
-                    x.style.display = "block";
-                    }
-                    else {
-                    x.style.display = "none";
-                    }
-                }
-
-
-
-
-
-
-                                    if (selectedImage = "1"){
-                        document.getElementsById("waterstone").style.display = "block";
-                    }   else if (selectedImage = "2"){
-                        document.getElementsById("airbase").style.display = "block";
-                    }   else if (selectedImage = "3"){
-                        document.getElementsById("somerset").style.display = "block";
-                    }   else if (selectedImage = "4"){
-                        document.getElementsById("campbell").style.display = "block";
-                    }   else if (selectedImage = "5"){
-                        document.getElementsById("gateway").style.display = "block";
-                    }   else if (selectedImage = "6"){
-                        document.getElementsById("homesteadmiddle").style.display = "block";
-                    }   else if (selectedImage = "7"){
-                        document.getElementsById("homesteadhigh").style.display = "block";
-                    }   else if (selectedImage = "8"){
-                        document.getElementsById("keys").style.display = "block";
-                    }   else (selectedImage = "9"){
-                        document.getElementsById("chambers").style.display = "block";
-                    }
--->
