@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Web Programming Week 8 Assignment</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylew8.css" />
+    <script type="text/javascript">
+    
+/* noun array */
+var nouns = [" cat", " house", " love", " America"];
+/* function that shows the items in the noun array */
+function showNoun()
+        {
+          document.getElementById("nounText").innerHTML = nouns;
+        }
+/* function that allows user to add to the items in the noun array */
+function addNoun()
+        { 
+          var newNoun = form.noun.value
+          nouns.push(" " + newNoun);
+          showNoun();
+        }
+/* verb array */
+var verbs = [" run", " sit", " think", " play"];
+/* function that shows the items in the verb array */
+function showVerb()
+        {
+          document.getElementById("verbText").innerHTML = verbs;
+        }
+/* function that allows user to add to the items in the verb array */        
+function addVerb()
+        {
+          var newVerb = form.verb.value;
+          verbs.push(" " + newVerb);
+          showVerb();
+        }
+
+/* adjective array */
+var adjs = [" pink", " hot", " furry", " delicious"];
+/* function that shows the items in the adjective array */
+function showAdj()
+        {
+          document.getElementById("adjText").innerHTML = adjs;
+        }
+/* function that allows user to add to the items in the adjective array */
+        function addAdj()
+        {
+          var newAdj = form.adj.value;
+          adjs.push(" " + newAdj);
+          showAdj();
+        }
+
+/* adverb array */
+var advs = [" lively", " patiently", " very", " quickly"];
+/* function that shows the items in the adverb array */
+function showAdv()
+        {
+          document.getElementById("advText").innerHTML = advs;
+        }
+/* function that allows user to add to the items in the adverb array */
+        function addAdv()
+        {
+          var newAdv = form.adv.value;
+          advs.push(" " + newAdv);
+          showAdv();
+        }
+/* preposition array */
+var preps = [" into", " around", " over", " through"];
+/* function that shows the items in the preposition array */
+function showPrep()
+        {
+          document.getElementById("prepText").innerHTML = preps;
+        }
+/* function that allows user to add to the items in the preposition array */        
+function addPrep()
+        {
+          var newPrep = form.prep.value;
+          preps.push(" " + newPrep);
+          showPrep();
+        }
+
+
+    </script>
+  </head>
+  <body onload="showNoun(); showAdj(); showAdv(); showVerb(); showPrep()">
+    <!--Top outline-->
+    <header></header>
+    <!--Side navigation Bar or left column-->
+    <div class="row"></div>
+    <!--Far left outline-->    
+    <div class="column heading"></div>
+    <div class="column nav">
+      <h1>EME6930</h1>
+      <h2 id="name">Sandra Chambers</h2>
+      <a href="index.html">Week 0</a>
+      <a href="week1.html">Week 1</a>
+      <a href="week2.html">Week 2</a>
+      <a href="week3.html">Week 3</a>
+      <a href="week4.html">Week 4</a>
+      <a href="week5.html">Week 5</a>
+      <a href="week6.html">Week 6</a>
+      <a href="week7.html">Week 7</a>
+      <a href="week8.html" class="active">Week 8</a>
+      <a href="#">Week 9</a>
+      <a href="#">Week 10</a>
+      <a href="#">Week 11</a>
+      <a href="#">Week 12</a>
+    </div>
+    <!--Center outline column-->
+    <div class="column heading"></div>
+    <!--Right hand column Section-->
+    <div class="column about">
+      <h1>Parts of Speech</h1>
+      <h2>
+        Words are like building blocks...<br>
+        ...when put together correctly, they can create wonderful things.
+      </h2>
+     
+     <!--Input box where form is displayed-->
+ 
+
+        <div id="inputForm" class="column">
+            <form id="form">
+                <h3>Parts of Speech</h3>
+                <p>Enter the parts of speech to add to the examples on the right.</p>
+    
+                <input type="text" id="noun" name="noun" placeholder="Add a new noun." value=""><br>
+                <button type="button" onclick="addNoun()">Submit Noun</button>
+ 
+   
+                <input type="text" id="adj" name="adj" placeholder="Add a new adjective." value=""><br>
+                <button type="button" onclick="addAdj()">Submit Adjective</button>
+ 
+   
+                <input type="text" id="adv" name="adv" placeholder="Add a new adverb." value=""><br>
+                <button type="button" onclick="addAdv()">Submit Adverb</button>
+ 
+  
+                <input type="text" id="verb" name="verb" placeholder="Add a new verb." value=""><br>
+                <button type="button" onclick="addVerb()">Submit Verb</button>
+ 
+  
+                <input type="text" id="prep" name="prep" placeholder="Add a new preposition." value=""><br>
+                <button type="button" onclick="addPrep()">Submit Preposition</button>
+            </form>
+      </div>  
+<!--array itemized list examples--> 
+      <div id="example" class="column">
+              <h3>Nouns</h3>
+                  <p id="nounText"></p>
+              <h3>Adjectives</h3>            
+                  <p id="adjText"></p>
+              <h3>Adverbs</h3>
+                  <p id="advText"></p>
+              <h3>Verbs</h3>
+                  <p id="verbText"></p>
+              <h3>Prepositions</h3>
+                  <p id="prepText"></p>
+      </div>
+
+</div>
+
+
+
+        <!--Far right outline column--> 
+    <div class="column heading"></div>
+        <!--Bottom outline/ footer--> 
+    <footer>Copyright &copy; 2021, Sandra Chambers</footer>
+  </body>
+</html>
