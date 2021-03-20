@@ -16,52 +16,57 @@ body {
   margin: 0 auto;
 }
 .column {
+  display: table;
   float: left;
-  height: 1200px;
+  height: 1000px;
 }
+
 /*Top outline style*/
 header {
   z-index: 1;
   width: 100%;
   height: 30px;
-  background-color: #02182b;
+  background-color: black;
   align-content: center;
+}
+#name {
+  padding: 5px 36px;
+  text-align: center;
+  margin: 10px 30px 40px 30px;
 }
 /*navigation bar style*/
 .nav {
   float: left;
   width: 20%;
-  background-color: #c5afa0;
+
   color: white;
+  background-image: url("images/greenLego.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-/*style for links*/
-a:link {
-  text-decoration: none;
-}
-/*change cursor and background color when mouse hovers*/
-h2 a:hover {
-  background-color: #557a95;
-  cursor: pointer;
-}
+
 /*navigation menu list item style*/
 .nav a {
   padding: 8px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #02182b;
+  color: black;
   display: block;
   text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px 30px;
 }
 /*navigation active page style*/
 .nav a.active {
-  color: #750a1c;
+  color: #7ca322;
 }
 /*navigation hover style*/
 .nav a:hover {
-  background-color: #557a95;
+  background-color: #062870;
   color: white;
   border-radius: 5px;
-  margin: 0px 15px;
+  margin: 10px 30px;
   cursor: pointer;
 }
 /*outline column style*/
@@ -69,7 +74,7 @@ h2 a:hover {
   width: 1%;
   writing-mode: vertical-rl;
   transform: rotateZ(180deg);
-  background-color: #02182b;
+  background-color: black;
   align-content: center;
 }
 
@@ -77,26 +82,28 @@ h2 a:hover {
 .about {
   float: left;
   width: 77%;
-  background-color: #750a1c;
+  background-image: url("images/blueLego.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /*heading and text style*/
 h1 {
   font-weight: 400;
   color: white;
-  text-shadow: 2px 2px #02182b;
+  text-shadow: 2px 2px black;
 }
 
 h2 {
   font-weight: 300;
-  color: #02182b;
+  color: black;
   background-color: white;
   border-radius: 5px;
-  padding: 5px 5px;
-  margin: 25px 15px;
+  padding: 5px;
+  margin: 20px;
 }
 h3 {
   font-weight: 200;
-  background-color: #557a95;
+  background-color: #062870;
   color: white;
   text-align: center;
   padding: 5px 5px;
@@ -104,67 +111,75 @@ h3 {
   margin-right: 15px;
   margin-top: 25px;
   margin-bottom: 25px;
+  border-radius: 5px;
 }
 p {
-  padding: 15px;
-  text-align: left;
-}
-ul {
-  list-style-type: none;
-  list-style-position: outside;
-}
-li {
-  margin: 15px;
   padding: 5px;
-}
-/*standard sections style*/
-.standard {
-  margin-bottom: 35px;
-  margin-top: 15px;
-}
-/*bottom right box style*/
-.text {
   text-align: left;
-  font-weight: 300;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px 5px;
-  margin: 25px 15px;
-  column-count: 2;
-  column-fill: auto;
-  height: 650px;
 }
-/*example box style*/
-#exampleBox {
+#text {
+  padding: 50px;
+  text-align: left;
+  margin: 30px;
+  margin-top: 250px;
+}
+/*input style*/
+input {
+  padding: 10px;
+  margin: 5px 5px 5px 15px;
+  font-size: 1em;
+  border: 1px solid #062870;
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+#inputForm {
+  float: left;
+  width: 45%;
+  height: 730px;
   text-align: left;
   font-weight: 300;
   background-color: white;
   border: 5px;
   border-radius: 5px;
-  border-color: #557a95;
-  height: 300px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding: 5px 5px;
-  margin: 15px 15px;
+  padding: 5px;
+  margin: 20px;
 }
+/*example style*/
+#example {
+  float: right;
+  width: 45%;
+  height: 730px;
+  text-align: left;
+  font-weight: 300;
+  background-color: white;
+  border: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+}
+
 /*button style*/
 button {
-  background-color: #02182b;
-  width: 150px;
+  float: right;
+  background-color: #062870;
+  width: 40%;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
   color: white;
+  text-align: center;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 2px 2px;
-  margin: 5px;
+  padding: 9px;
+  margin: 5px 15px 5px 5px;
 }
 /*button hover style*/
-.button:hover {
-  background-color: #557a95;
+button:hover {
+  background-color: #7ca322;
   cursor: pointer;
 }
+
 /*footer style*/
 footer {
   color: white;
@@ -172,6 +187,6 @@ footer {
   z-index: 1;
   clear: both;
   width: 100%;
-  background-color: #02182b;
+  background-color: black;
   align-content: center;
 }
