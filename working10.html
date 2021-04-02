@@ -2,9 +2,9 @@
 
 <html lang="en">
   <head>
-    <title>Web Programming Week 8 Assignment</title>
+    <title>Web Programming Week 10 Assignment</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="stylew8.css" />
+
     <script type="text/javascript">
     
 /* noun array */
@@ -79,7 +79,156 @@ function addPrep()
           preps.push(" " + newPrep);
           showPrep();
         }
+/* This is an array of the 100 most commonly used words in English. */
+var commonWords = [
+"the",
+"be",
+"to",
+"of",
+"and",
+"a",
+"in",
+"that",
+"have",
+"I",
+"it",
+"for",
+"not",
+"on",
+"with",
+"he",
+"as",
+"you",
+"do",
+"at",
+"this",
+"but",
+"his",
+"by",
+"from",
+"they",
+"we",
+"say",
+"her",
+"she",
+"or",
+"an",
+"will",
+"my",
+"one",
+"all",
+"would",
+"there",
+"their",
+"what",
+"so",
+"up",
+"out",
+"if",
+"about",
+"who",
+"get",
+"which",
+"go",
+"me",
+"when",
+"make",
+"can",
+"like",
+"time",
+"no",
+"just",
+"him",
+"know",
+"take",
+"people",
+"into",
+"year",
+"your",
+"good",
+"some",
+"could",
+"them",
+"see",
+"other",
+"than",
+"then",
+"now",
+"look",
+"only",
+"come",
+"its",
+"over",
+"think",
+"also",
+"back",
+"after",
+"use",
+"two",
+"how",
+"our",
+"work",
+"first",
+"well",
+"way",
+"even",
+"new",
+"want",
+"because",
+"any",
+"these",
+"give",
+"day",
+"most",
+'us'];
 
+
+/* Function to express where the chosen words are on the list.*/
+
+function findWord(word, commonArray)
+  {
+  var len = commonArray.length;
+    var position = -9;
+  
+  	for (i = 0; i < len; i++) 
+    		if (commonArray[i] == word)
+          position = i + 1;
+    
+      return position;
+  }
+ /* Function to write if the words are in the array and their position in the array.*/
+  function writeWord(input)
+  {
+     var pos = findWord(input, commonWords);
+    
+    if (pos == -9){
+      writeText("Your word is not on the most commonly used English words list.", "text");
+    }else {
+      writeText("The word  '" + input + "'  is number " + pos + " on the list of most commonly used English words.", "text");
+  }
+}
+
+
+/*This array contains random strings of praise.*/
+var praises = ["You are a English Master!", "Way to go, Grammar Pro!", "Great word!","Keep up the great Work!", "Outstanding!", "You are amazing!", "Excellent job!", "Outstanding performance!", "Super!"];
+
+/*This function returns random praise to the user after they enter in words.*/  
+function randomPraise(){
+
+   var randomNumber = Math.floor(Math.random() * (praises.length));
+   writeText (praises[randomNumber],'praise');
+ }
+
+  /*this function returns an integer in a certain range that is speficied in range speficied by the two paramaters, upper and lower*/
+
+
+   
+/*this function writes the text to the HTML id*/
+
+function writeText(txt, id)
+        {  
+        document.getElementById(id).innerHTML=txt;
+        }
 
     </script>
   </head>
@@ -101,9 +250,9 @@ function addPrep()
       <a href="week5.html">Week 5</a>
       <a href="week6.html">Week 6</a>
       <a href="week7.html">Week 7</a>
-      <a href="week8.html" class="active">Week 8</a>
+      <a href="week8.html">Week 8</a>
       <a href="week9.html">Week 9</a>
-      <a href="week10.html">Week 10</a>
+      <a href="week10.html" class="active">Week 10</a>
       <a href="#">Week 11</a>
       <a href="#">Week 12</a>
     </div>
@@ -122,28 +271,31 @@ function addPrep()
 
         <div id="inputForm" class="column">
             <form id="form">
-                <h3>Parts of Speech</h3>
-                <p>Enter the parts of speech to add to the examples on the right.</p>
-    
-                <input type="text" id="noun" name="noun" placeholder="Add a new noun." value=""><br>
-                <button type="button" onclick="addNoun()">Submit Noun</button>
+                <h3>Enter the parts of speech to add to the examples on the right.</h3>
+             
+                <input type="text" id="noun" name="noun" placeholder="Add a new noun." value="">
+                <button type="button" onclick="addNoun(); randomPraise(); writeWord(document.getElementById('noun').value)">Submit Noun</button>
  
    
-                <input type="text" id="adj" name="adj" placeholder="Add a new adjective." value=""><br>
-                <button type="button" onclick="addAdj()">Submit Adjective</button>
+                <input type="text" id="adj" name="adj" placeholder="Add a new adjective." value="">
+                <button type="button" onclick="addAdj(); randomPraise(); writeWord(document.getElementById('adj').value)">Submit Adjective</button>
  
    
-                <input type="text" id="adv" name="adv" placeholder="Add a new adverb." value=""><br>
-                <button type="button" onclick="addAdv()">Submit Adverb</button>
+                <input type="text" id="adv" name="adv" placeholder="Add a new adverb." value="">
+                <button type="button" onclick="addAdv(); randomPraise(); writeWord(document.getElementById('adv').value)">Submit Adverb</button>
  
   
-                <input type="text" id="verb" name="verb" placeholder="Add a new verb." value=""><br>
-                <button type="button" onclick="addVerb()">Submit Verb</button>
+                <input type="text" id="verb" name="verb" placeholder="Add a new verb." value="">
+                <button type="button" onclick="addVerb(); randomPraise(); writeWord(document.getElementById('verb').value)">Submit Verb</button>
  
   
-                <input type="text" id="prep" name="prep" placeholder="Add a new preposition." value=""><br>
-                <button type="button" onclick="addPrep()">Submit Preposition</button>
-            </form>
+                <input type="text" id="prep" name="prep" placeholder="Add a new preposition." value="">
+                <button type="button" onclick="addPrep(); randomPraise(); writeWord(document.getElementById('prep').value)">Submit Preposition</button>
+             </form><br><br>
+
+            <p id="text"></p><br>
+            <div id="praise"></div>
+
       </div>  
 <!--array itemized list examples--> 
       <div id="example" class="column">
