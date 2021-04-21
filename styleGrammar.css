@@ -40,6 +40,7 @@ header {
 .navbar a {
   float: left;
   font-size: 2vw;
+
   color: white;
   text-align: center;
   padding: 1vw 2vw;
@@ -53,6 +54,7 @@ header {
 .dropdown .dropbtn {
   position: relative;
   font-size: 2vw;
+  width: 18vw;
   border: none;
   outline: none;
   color: white;
@@ -186,6 +188,7 @@ p.story {
 
 input[type="text"],
 select {
+  font-family: "Dosis", "Segoe UI", Arial, sans-serif;
   column-count: 3;
   width: 25%;
   padding: 0.75vw;
@@ -196,6 +199,9 @@ select {
   box-sizing: border-box;
 }
 button {
+  font-family: "Dosis", "Segoe UI", Arial, sans-serif;
+  font-size: 1vw;
+  width: 12vw;
   color: white;
   background-color: #062870;
   padding: 0.75vw;
@@ -203,6 +209,7 @@ button {
   display: inline-block;
   border-radius: 4px;
   box-sizing: border-box;
+  box-shadow: 1px 8px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
 /*footer style*/

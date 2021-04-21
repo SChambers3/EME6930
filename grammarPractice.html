@@ -32,8 +32,42 @@ var pronoun = [" her", " his", " that", " our", " I", " your", " itself", " hers
 /* article array */
 var article = [" the", " a", " an"];
 
+/* This is an array of the 100 most commonly used words in English. */
+var commonWords = [
+"the","be","to","of","and","a","in","that","have","I","it","for","not",
+"on","with","he","as","you","do","at","this","but","his","by","from","they",
+"we","say","her","she","or","an","will","my","one","all","would","there","their",
+"what","so","up","out","if","about","who","get","which","go","me","when","make",
+"can","like","time","no","just","him","know","take","people","into","year","your",
+"good","some","could","them","see","other","than","then","now","look","only","come",
+"its","over","think","also","back","after","use","two","how","our","work","first",
+"well","way","even","new","want","because","any","these","give","day","most",'us'
+];
 
+/* Function to express where the chosen words are on the list.*/
 
+function findWord(word, commonArray)
+  {
+  var len = commonArray.length;
+    var position = -9;
+  
+  	for (i = 0; i < len; i++) 
+    		if (commonArray[i] == word)
+          position = i + 1;
+    
+      return position;
+  }
+ /* Function to write if the words are in the array and their position in the array.*/
+ function writeWord(input)
+  {
+     var pos = findWord(input, commonWords);
+    
+    if (pos == -9){
+      writeText("Your word is not on the most commonly used English words list.", "text");
+    }else {
+      writeText("The word  '" + input + "'  is number " + pos + " on the list of most commonly used English words.", "text");
+  }
+}
 
         // write it to writeText
         function writeText(txt, id)
@@ -77,6 +111,7 @@ var article = [" the", " a", " an"];
 
         function randomPartOfSpeech(){
             var randomNumber = Math.floor(Math.random() * (array.length));
+            writeText (array[randomNumber],'RandomStory');
         }
 
 
@@ -211,12 +246,12 @@ var article = [" the", " a", " an"];
                         <h4>Now create random Mad Libs with the random parts of speech generator!</h4>
                         <p id="RandomStory" class="story"></p> 
 
-                        <button type="button" onclick="writeUserStory()">Your Story 1</button>
-                        <button type="button" onclick="writeUserStory()">Your Story 2</button>
-                        <button type="button" onclick="writeUserStory()">Your Story 3</button>
-                        <button type="button" onclick="writeUserStory()">Your Story 4</button>
-                        <button type="button" onclick="writeUserStory()">Your Story 5</button>
-
+                        <button type="button" onclick="writeUserStory()">Random Story 1</button>
+                        <button type="button" onclick="writeUserStory()">Random Story 2</button>
+                        <button type="button" onclick="writeUserStory()">Random Story 3</button>
+                        <button type="button" onclick="writeUserStory()">Random Story 4</button>
+                        <button type="button" onclick="writeUserStory()">Random Story 5</button>
+                        <br> <br>
  
                     </form>
                 </div>
