@@ -109,9 +109,9 @@ function findWord(word, commonArray)
 
 
 
-        function randomPartOfSpeech(){
-            var randomNumber = Math.floor(Math.random() * (array.length));
-            writeText (array[randomNumber],'RandomStory');
+        function randomPartOfSpeech(AnArray){
+            return AnArray[Math.floor(Math.random() * (AnArray.length))];
+
         }
 
 
@@ -119,33 +119,32 @@ function findWord(word, commonArray)
 
         function writeRandomStory1(text, id)
         {
-        
             var story1= randomPartOfSpeech(interjection) + "! They said " + randomPartOfSpeech(adverb) + " as they jumped into their " +  randomPartOfSpeech(noun) + " and flew off " + randomPartOfSpeech(preposition) + " their " + randomPartOfSpeech(adjective) + " tacomobile."
-            writeText(story1, "UserStory")
+            writeText(story1, "RandomStory")
         }
         // writes story 1 with random input
         function writeRandomStory2(text, id)
         {
-            var story2= "The " + document.getElementById("userNoun").value + " summersaults " + document.getElementById("userAdv").value +" " + document.getElementById("userPrep").value + " the " + document.getElementById("userAdj").value + " fence and then " + document.getElementById("userVerb").value + "s and yells, " + document.getElementById("userInt").value + "."
-            writeText(story2, "UserStory")
+            var story2= "The " + randomPartOfSpeech(noun) + " summersaults " + randomPartOfSpeech(adverb) +" " + randomPartOfSpeech(preposition) + " the " + randomPartOfSpeech(adjective) + " fence and then " + randomPartOfSpeech(verb) + "s and yells, " + randomPartOfSpeech(interjection) + "."
+            writeText(story2, "RandomStory")
         }
         // writes story 3 with random input
         function writeRandomStory3(text, id)
         {
-            var story3= "The " + document.getElementById("userAdj").value + " " + document.getElementById("userNoun").value + " saw a pickle " + document.getElementById("userVerb").value + " while jumping " + document.getElementById("userConj").value + " his mother."
-            writeText(story3, "UserStory")
+            var story3= "The " + randomPartOfSpeech(adjective) + " " + randomPartOfSpeech(noun) + " saw a pickle " + randomPartOfSpeech(verb) + " while jumping " + randomPartOfSpeech(conjunction) + " his mother."
+            writeText(story3, "RandomStory")
         }
         // writes story 4 with random input
         function writeRandomStory4(text, id)
         {
-            var story4= document.getElementById("userInt").value + ", screamed the " + document.getElementById("userNoun").value + " as it " + document.getElementById("userAdv").value + " fell from the " + document.getElementById("userAdj").value + " ball."
-            writeText(story4, "UserStory")
+            var story4= randomPartOfSpeech(interjection) + ", screamed the " + randomPartOfSpeech(noun) + " as it " + randomPartOfSpeech(adverb) + " fell from the " + randomPartOfSpeech(adjective) + " ball."
+            writeText(story4, "RandomStory")
         }
         // writes story 5 with random input
         function writeRandomStory5(text, id)
         {
-            var story5= " The " + document.getElementById("userNoun").value + "s saw the pythons " + document.getElementById("userAdv").value + " " + document.getElementById("userVerb").value + " but didn't stop the " + document.getElementById("userAdj").value + " danceoff."
-            writeText(story5, "UserStory")
+            var story5= " The " + randomPartOfSpeech(noun) + "s saw the pythons " + randomPartOfSpeech(adverb) + " " + randomPartOfSpeech(verb) + " but didn't stop the " + randomPartOfSpeech(adjective) + " danceoff."
+            writeText(story5, "RandomStory")
         }
 
     </script>
@@ -246,11 +245,11 @@ function findWord(word, commonArray)
                         <h4>Now create random Mad Libs with the random parts of speech generator!</h4>
                         <p id="RandomStory" class="story"></p> 
 
-                        <button type="button" onclick="writeUserStory()">Random Story 1</button>
-                        <button type="button" onclick="writeUserStory()">Random Story 2</button>
-                        <button type="button" onclick="writeUserStory()">Random Story 3</button>
-                        <button type="button" onclick="writeUserStory()">Random Story 4</button>
-                        <button type="button" onclick="writeUserStory()">Random Story 5</button>
+                        <button type="button" onclick="writeRandomStory1()">Random Story 1</button>
+                        <button type="button" onclick="writeRandomStory2()">Random Story 2</button>
+                        <button type="button" onclick="writeRandomStory3()">Random Story 3</button>
+                        <button type="button" onclick="writeRandomStory4()">Random Story 4</button>
+                        <button type="button" onclick="writeRandomStory5()">Random Story 5</button>
                         <br> <br>
  
                     </form>
