@@ -6,6 +6,114 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styleGrammar.css" />
     <script type="text/javascript">
+/* adverb array */
+var adverb = [" lively", " patiently", " very", " quickly", "energetically", " reasonably", " bashfully", " bravely", " chaotically", " sadly", " barely", " correctly", " briskly", " gently", " greedily", " carefully"];
+
+/* preposition array */
+var preposition = [" into", " around", " over", " through", " in", " under", " toward", " beyond", " amidst", " along", " by", " behind", " up", " at", " from", " of", " with",];
+
+/* adjective array */
+var adjective = [" pink", " hot", " furry", " delicious", " gigantic", " beautiful", " blue", " little", " horrible", " slimy", " squishy", " brilliant", " shiny", " soft", " graceful", " deft", " agile", " clumsy", " sly", " burgundy", " fiery"];
+
+/* verb array */
+var verb = [" run", " sit", " think", " play"];
+
+/* noun array */
+var noun = [" cat", " house", " love", " America", " chair", " jar", " street", " unicorn", " dragon", " person", " llama", " gatekeeper", " potato", " elephant", " grape", " paper", " towel", " muffin", " square", " spaceship", " cow", " giraffe", " lion", " tentacle", " gnome", " banana", " school", " herd", " sun", " car", " cupcake", " planet", " hat", " truck", " form", " idea", " bun", " monster", " desktop", " ghost", " machine", " flower", " Billy", " Susan", " cheese", " sister", " leg", " skunk", " Smurf", " shoe", " Medusa", " movie", " bomb", " caravan", " shop", " bat", " ball", " boy", " bee", " puppy", " kitten", " chicken nugget", " hamburger", " perfume", " hobby", " city", " zipper", " sheep", " chip", " cookie"];
+
+/* interjection array */
+var interjection = [" Wow", " Yaoza", " Ay", " Oh My", " Ahh", " Hey", " Yay", " Shoot", " Cowabunga", " Wowzer", " Rats", " Ooh la la", " Drat", " Zoinks", " Super", " Ouch", " Wahoo", " Bravo"];
+/* conjunction array */
+var conjunction = [" and", " but", " for", " or", " nor", " yet", " so"];
+
+/* pronoun array */
+var pronoun = [" her", " his", " that", " our", " I", " your", " itself", " herself", " myself", " us", " mine", " them", " it", " this", " these", " those",];
+
+/* article array */
+var article = [" the", " a", " an"];
+
+
+
+
+        // write it to writeText
+        function writeText(txt, id)
+        {  
+        document.getElementById(id).innerHTML=txt;
+        }
+         // writes story 1 with user input
+        function writeUserStory1(text, id)
+        {
+            var story1= document.getElementById("userInt").value + "! They said " + document.getElementById("userAdv").value + " as they jumped into their " +  document.getElementById("userNoun").value + " and flew off " + document.getElementById("userPrep").value + " their " + document.getElementById("userAdj").value + " tacomobile."
+            writeText(story1, "UserStory")
+        }
+         // writes story 2 with user input
+        function writeUserStory2(text, id)
+        {
+            var story2= "The " + document.getElementById("userNoun").value + " summersaults " + document.getElementById("userAdv").value +" " + document.getElementById("userPrep").value + " the " + document.getElementById("userAdj").value + " fence and then " + document.getElementById("userVerb").value + "s and yells, " + document.getElementById("userInt").value + "."
+            writeText(story2, "UserStory")
+        }
+         // writes story 3 with user input
+        function writeUserStory3(text, id)
+        {
+            var story3= "The " + document.getElementById("userAdj").value + " " + document.getElementById("userNoun").value + " saw a pickle " + document.getElementById("userVerb").value + " while jumping " + document.getElementById("userConj").value + " his mother."
+            writeText(story3, "UserStory")
+        }
+
+         // writes story 4 with user input
+        function writeUserStory4(text, id)
+        {
+            var story4= document.getElementById("userInt").value + ", screamed the " + document.getElementById("userNoun").value + " as it " + document.getElementById("userAdv").value + " fell from the " + document.getElementById("userAdj").value + " ball."
+            writeText(story4, "UserStory")
+        }
+         // writes story 5 with user input
+        function writeUserStory5(text, id)
+        {
+            var story5= " The " + document.getElementById("userNoun").value + "s saw the pythons " + document.getElementById("userAdv").value + " " + document.getElementById("userVerb").value + " but didn't stop the " + document.getElementById("userAdj").value + " danceoff."
+            writeText(story5, "UserStory")
+        }
+
+
+
+
+        function randomPartOfSpeech(){
+            var randomNumber = Math.floor(Math.random() * (array.length));
+        }
+
+
+         // writes story 1 with random input
+
+        function writeRandomStory1(text, id)
+        {
+        
+            var story1= randomPartOfSpeech(interjection) + "! They said " + randomPartOfSpeech(adverb) + " as they jumped into their " +  randomPartOfSpeech(noun) + " and flew off " + randomPartOfSpeech(preposition) + " their " + randomPartOfSpeech(adjective) + " tacomobile."
+            writeText(story1, "UserStory")
+        }
+        // writes story 1 with random input
+        function writeRandomStory2(text, id)
+        {
+            var story2= "The " + document.getElementById("userNoun").value + " summersaults " + document.getElementById("userAdv").value +" " + document.getElementById("userPrep").value + " the " + document.getElementById("userAdj").value + " fence and then " + document.getElementById("userVerb").value + "s and yells, " + document.getElementById("userInt").value + "."
+            writeText(story2, "UserStory")
+        }
+        // writes story 3 with random input
+        function writeRandomStory3(text, id)
+        {
+            var story3= "The " + document.getElementById("userAdj").value + " " + document.getElementById("userNoun").value + " saw a pickle " + document.getElementById("userVerb").value + " while jumping " + document.getElementById("userConj").value + " his mother."
+            writeText(story3, "UserStory")
+        }
+        // writes story 4 with random input
+        function writeRandomStory4(text, id)
+        {
+            var story4= document.getElementById("userInt").value + ", screamed the " + document.getElementById("userNoun").value + " as it " + document.getElementById("userAdv").value + " fell from the " + document.getElementById("userAdj").value + " ball."
+            writeText(story4, "UserStory")
+        }
+        // writes story 5 with random input
+        function writeRandomStory5(text, id)
+        {
+            var story5= " The " + document.getElementById("userNoun").value + "s saw the pythons " + document.getElementById("userAdv").value + " " + document.getElementById("userVerb").value + " but didn't stop the " + document.getElementById("userAdj").value + " danceoff."
+            writeText(story5, "UserStory")
+        }
+
+    </script>
 
     </script>
   </head>
@@ -63,7 +171,7 @@
         <div class="dropdown">
             <button class="dropbtn">Practice </button>
                 <div class="dropdown-content">
-                    <a href="#PRAC1">Practice Parts of Speech</a>			
+                    <a href="#PRAC1">Mad Libs</a>			
                     <a href="#PRAC2">Practice Word Jobs</a>
                     <a href="#PRAC3">Practice Diagramming</a>
                 </div>
@@ -73,9 +181,46 @@
    <!--content--> 
 
     <div class="explanations">
-        <h3 id="PRAC1">Practice Activity 1</h3>
+        <h3 id="PRAC1">Mad Libs</h3>
             <div class="description">
-                <p>This will be the first interactive practice element using Javascript.<br><br><br><br><br><br><br><br><br><br><br></p>	
+                <div id madLib>
+                    <h4>Enter your own parts of speech below to create a new story.</h4>	
+                    <form id="ML">
+                        <div id="words">
+                        <input type="text" id="userAdj"  placeholder="adjective" value="">
+                        <input type="text" id="userNoun"  placeholder="noun" value="">
+                        <input type="text" id="userAdv"  placeholder="adverb" value="">
+                        <input type="text" id="userPrep"  placeholder="preposition" value="">
+                        <input type="text" id="userArt"  placeholder="article" value="">
+                        <input type="text" id="userVerb"  placeholder="verb" value="">
+                        <input type="text" id="userInt"  placeholder="interjection" value="">
+                        <input type="text" id="userPro"  placeholder="pronoun" value="">
+                        <input type="text" id="userConj"  placeholder="conjunction" value="">
+                        </div>
+                        <br>
+                        <button type="button" onclick="writeUserStory1()">Your Story 1</button>
+                        <button type="button" onclick="writeUserStory2()">Your Story 2</button>
+                        <button type="button" onclick="writeUserStory3()">Your Story 3</button>
+                        <button type="button" onclick="writeUserStory4()">Your Story 4</button>
+                        <button type="button" onclick="writeUserStory5()">Your Story 5</button>
+                        
+                 
+                        <h4>Here is your personal Mad Lib!</h4>
+                        <p id="UserStory" class="story"></p>
+
+                        <h4>Now create random Mad Libs with the random parts of speech generator!</h4>
+                        <p id="RandomStory" class="story"></p> 
+
+                        <button type="button" onclick="writeUserStory()">Your Story 1</button>
+                        <button type="button" onclick="writeUserStory()">Your Story 2</button>
+                        <button type="button" onclick="writeUserStory()">Your Story 3</button>
+                        <button type="button" onclick="writeUserStory()">Your Story 4</button>
+                        <button type="button" onclick="writeUserStory()">Your Story 5</button>
+
+ 
+                    </form>
+                </div>
+                
             </div>
 
         <h3 id="PRAC2">Practice Activity 2</h3>
