@@ -141,12 +141,18 @@ h3 {
 h4 {
   padding: 0.5vw;
   text-align: left;
-  font-size: 2vw;
+  font-size: 1.5vw;
+}
+h5 {
+  padding: 0.5vw;
+  text-align: left;
+  font-size: 1.5vw;
+  font-weight: bold;
 }
 p {
   padding: 0.5vw;
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 p.story {
   padding: 0.5vw;
@@ -185,7 +191,45 @@ p.story {
   width: 80%;
   height: 80%;
 }
+/*Formatting for the practice quiz */
+.box {
+  background-color: #ececec;
+  height: 10vw;
+  width: 50vw;
+  margin: 0 auto;
+  border-radius: 0.5vw;
+}
 
+.question {
+  background-color: #062870;
+  padding: 1vw;
+  font-size: 1vw;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  margin-bottom: 2vw;
+}
+.option {
+  display: inline-block;
+  padding: 1vw;
+}
+.option:hover {
+  background: #7ca322;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+.result {
+  background-color: #ececec;
+  border: 3px solid #7ca322;
+  color: #7ca322;
+  font-size: 6vw;
+}
+.option input:checked .option {
+  background-color: coral;
+  color: rgb(255, 21, 185);
+}
+/*Formatting for the form */
 input[type="text"],
 select {
   font-family: "Dosis", "Segoe UI", Arial, sans-serif;
@@ -198,6 +242,7 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+/*Formatting for the buttons */
 button {
   font-family: "Dosis", "Segoe UI", Arial, sans-serif;
   font-size: 1vw;
@@ -210,12 +255,16 @@ button {
   border-radius: 4px;
   box-sizing: border-box;
   box-shadow: 1px 8px 8px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+button:hover {
+  background: #7ca322;
 }
 
 /*footer style*/
 footer {
   color: white;
-  height: 6vw;
+  height: 3vw;
   z-index: 1;
   clear: both;
   width: 100%;

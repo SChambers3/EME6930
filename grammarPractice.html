@@ -5,151 +5,11 @@
     <title>Web Programming Final Project</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styleGrammar.css" />
-    <script type="text/javascript">
-/* adverb array */
-var adverb = [" lively", " patiently", " very", " quickly", "energetically", " reasonably", " bashfully", " bravely", " chaotically", " sadly", " barely", " correctly", " briskly", " gently", " greedily", " carefully"];
 
-/* preposition array */
-var preposition = [" into", " around", " over", " through", " in", " under", " toward", " beyond", " amidst", " along", " by", " behind", " up", " at", " from", " of", " with",];
-
-/* adjective array */
-var adjective = [" pink", " hot", " furry", " delicious", " gigantic", " beautiful", " blue", " little", " horrible", " slimy", " squishy", " brilliant", " shiny", " soft", " graceful", " deft", " agile", " clumsy", " sly", " burgundy", " fiery"];
-
-/* verb array */
-var verb = [" run", " sit", " think", " play"];
-
-/* noun array */
-var noun = [" cat", " house", " love", " America", " chair", " jar", " street", " unicorn", " dragon", " person", " llama", " gatekeeper", " potato", " elephant", " grape", " paper", " towel", " muffin", " square", " spaceship", " cow", " giraffe", " lion", " tentacle", " gnome", " banana", " school", " herd", " sun", " car", " cupcake", " planet", " hat", " truck", " form", " idea", " bun", " monster", " desktop", " ghost", " machine", " flower", " Billy", " Susan", " cheese", " sister", " leg", " skunk", " Smurf", " shoe", " Medusa", " movie", " bomb", " caravan", " shop", " bat", " ball", " boy", " bee", " puppy", " kitten", " chicken nugget", " hamburger", " perfume", " hobby", " city", " zipper", " sheep", " chip", " cookie"];
-
-/* interjection array */
-var interjection = [" Wow", " Yaoza", " Ay", " Oh My", " Ahh", " Hey", " Yay", " Shoot", " Cowabunga", " Wowzer", " Rats", " Ooh la la", " Drat", " Zoinks", " Super", " Ouch", " Wahoo", " Bravo"];
-/* conjunction array */
-var conjunction = [" and", " but", " for", " or", " nor", " yet", " so"];
-
-/* pronoun array */
-var pronoun = [" her", " his", " that", " our", " I", " your", " itself", " herself", " myself", " us", " mine", " them", " it", " this", " these", " those",];
-
-/* article array */
-var article = [" the", " a", " an"];
-
-/* This is an array of the 100 most commonly used words in English. */
-var commonWords = [
-"the","be","to","of","and","a","in","that","have","I","it","for","not",
-"on","with","he","as","you","do","at","this","but","his","by","from","they",
-"we","say","her","she","or","an","will","my","one","all","would","there","their",
-"what","so","up","out","if","about","who","get","which","go","me","when","make",
-"can","like","time","no","just","him","know","take","people","into","year","your",
-"good","some","could","them","see","other","than","then","now","look","only","come",
-"its","over","think","also","back","after","use","two","how","our","work","first",
-"well","way","even","new","want","because","any","these","give","day","most",'us'
-];
-
-/* Function to express where the chosen words are on the list.*/
-
-function findWord(word, commonArray)
-  {
-  var len = commonArray.length;
-    var position = -9;
-  
-  	for (i = 0; i < len; i++) 
-    		if (commonArray[i] == word)
-          position = i + 1;
-    
-      return position;
-  }
- /* Function to write if the words are in the array and their position in the array.*/
- function writeWord(input)
-  {
-     var pos = findWord(input, commonWords);
-    
-    if (pos == -9){
-      writeText("Your word is not on the most commonly used English words list.", "text");
-    }else {
-      writeText("The word  '" + input + "'  is number " + pos + " on the list of most commonly used English words.", "text");
-  }
-}
-
-        // write it to writeText
-        function writeText(txt, id)
-        {  
-        document.getElementById(id).innerHTML=txt;
-        }
-         // writes story 1 with user input
-        function writeUserStory1(text, id)
-        {
-            var story1= document.getElementById("userInt").value + "! They said " + document.getElementById("userAdv").value + " as they jumped into their " +  document.getElementById("userNoun").value + " and flew off " + document.getElementById("userPrep").value + " their " + document.getElementById("userAdj").value + " tacomobile."
-            writeText(story1, "UserStory")
-        }
-         // writes story 2 with user input
-        function writeUserStory2(text, id)
-        {
-            var story2= "The " + document.getElementById("userNoun").value + " summersaults " + document.getElementById("userAdv").value +" " + document.getElementById("userPrep").value + " the " + document.getElementById("userAdj").value + " fence and then " + document.getElementById("userVerb").value + "s and yells, " + document.getElementById("userInt").value + "."
-            writeText(story2, "UserStory")
-        }
-         // writes story 3 with user input
-        function writeUserStory3(text, id)
-        {
-            var story3= "The " + document.getElementById("userAdj").value + " " + document.getElementById("userNoun").value + " saw a pickle " + document.getElementById("userVerb").value + " while jumping " + document.getElementById("userConj").value + " his mother."
-            writeText(story3, "UserStory")
-        }
-
-         // writes story 4 with user input
-        function writeUserStory4(text, id)
-        {
-            var story4= document.getElementById("userInt").value + ", screamed the " + document.getElementById("userNoun").value + " as it " + document.getElementById("userAdv").value + " fell from the " + document.getElementById("userAdj").value + " ball."
-            writeText(story4, "UserStory")
-        }
-         // writes story 5 with user input
-        function writeUserStory5(text, id)
-        {
-            var story5= " The " + document.getElementById("userNoun").value + "s saw the pythons " + document.getElementById("userAdv").value + " " + document.getElementById("userVerb").value + " but didn't stop the " + document.getElementById("userAdj").value + " danceoff."
-            writeText(story5, "UserStory")
-        }
+    <script src="script.js"></script>
 
 
 
-
-        function randomPartOfSpeech(AnArray){
-            return AnArray[Math.floor(Math.random() * (AnArray.length))];
-
-        }
-
-
-         // writes story 1 with random input
-
-        function writeRandomStory1(text, id)
-        {
-            var story1= randomPartOfSpeech(interjection) + "! They said " + randomPartOfSpeech(adverb) + " as they jumped into their " +  randomPartOfSpeech(noun) + " and flew off " + randomPartOfSpeech(preposition) + " their " + randomPartOfSpeech(adjective) + " tacomobile."
-            writeText(story1, "RandomStory")
-        }
-        // writes story 1 with random input
-        function writeRandomStory2(text, id)
-        {
-            var story2= "The " + randomPartOfSpeech(noun) + " summersaults " + randomPartOfSpeech(adverb) +" " + randomPartOfSpeech(preposition) + " the " + randomPartOfSpeech(adjective) + " fence and then " + randomPartOfSpeech(verb) + "s and yells, " + randomPartOfSpeech(interjection) + "."
-            writeText(story2, "RandomStory")
-        }
-        // writes story 3 with random input
-        function writeRandomStory3(text, id)
-        {
-            var story3= "The " + randomPartOfSpeech(adjective) + " " + randomPartOfSpeech(noun) + " saw a pickle " + randomPartOfSpeech(verb) + " while jumping " + randomPartOfSpeech(conjunction) + " his mother."
-            writeText(story3, "RandomStory")
-        }
-        // writes story 4 with random input
-        function writeRandomStory4(text, id)
-        {
-            var story4= randomPartOfSpeech(interjection) + ", screamed the " + randomPartOfSpeech(noun) + " as it " + randomPartOfSpeech(adverb) + " fell from the " + randomPartOfSpeech(adjective) + " ball."
-            writeText(story4, "RandomStory")
-        }
-        // writes story 5 with random input
-        function writeRandomStory5(text, id)
-        {
-            var story5= " The " + randomPartOfSpeech(noun) + "s saw the pythons " + randomPartOfSpeech(adverb) + " " + randomPartOfSpeech(verb) + " but didn't stop the " + randomPartOfSpeech(adjective) + " danceoff."
-            writeText(story5, "RandomStory")
-        }
-
-    </script>
-
-    </script>
   </head>
   <body>
          <!--sticky div--> 
@@ -206,8 +66,8 @@ function findWord(word, commonArray)
             <button class="dropbtn">Practice </button>
                 <div class="dropdown-content">
                     <a href="#PRAC1">Mad Libs</a>			
-                    <a href="#PRAC2">Practice 2</a>
-                    <a href="#PRAC3">Practice 3</a>
+                    <a href="#PRAC2">Common English Words</a>
+                <a href="#PRAC3">Practice Quiz</a>
                 </div>
         </div>
     </div>
@@ -215,6 +75,7 @@ function findWord(word, commonArray)
    <!--content--> 
 
     <div class="explanations">
+        <!--Mad Lib content--> 
         <h3 id="PRAC1">Mad Libs</h3>
             <div class="description">
                 <div id madLib>
@@ -256,15 +117,70 @@ function findWord(word, commonArray)
                 </div>
                 
             </div>
-
-        <h3 id="PRAC2">Practice Activity 2</h3>
-            <div class="description">    
-                <p>This will be the second interactive practice element using Javascript.<br><br><br><br><br><br><br><br><br><br><br></p>		
+<!-- common English words content--> 
+        <h3 id="PRAC2">Common English Words</h3>
+            <div class="description">  
+                <h4>Type a word in the box below. Can you guess one of the most commmon words in the English language? </h4>  
+            
+                <form id="form">
+                
+                    <input type="text" id="common" name="common" placeholder="Guess a common word." value="">
+                    <button type="button" onclick="writeWord(document.getElementById('common').value)">Submit</button>
+                </form>
+                 <p id="text"><br></p>	<br><br>
             </div>
 
-        <h3 id="PRAC3">Practice Activity 3</h3>
+
+<!--Practice quiz content--> 
+
+        <h3 id="PRAC3">Practice Quiz</h3>
             <div class="description">   
-                <p>This will be the third interactive practice element using Javascript.<br><br><br><br><br><br><br><br><br><br><br></p>
+                <h4>Choose the correct answer to each questions. If you need a hint, click on the buttons at the bottom.</h4>
+
+                <div id="quizContainer" class="box">
+
+                        <div id="question" class="question"></div>
+                        <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1" ></span></label>
+                        <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2" ></span></label>
+                        <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3" ></span></label>
+                        <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4" ></span></label>
+                        <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>                 
+                </div>
+                <div id="result" class="box result" style="display:none;">
+                </div>
+                <script src="question.js"></script>
+                <script src="quiz-script.js"></script>
+
+
+
+
+
+
+
+
+
+                <h4>Hints</h4>
+                <p id = "hint"></p>
+                <h5>Parts of Speech</h5>
+                <button class="button" onclick="NOUN.writeExample();">Noun</button>
+                <button class="button" onclick="ART.writeExample();">Article</button>  
+                <button class="button" onclick="ADJ.writeExample();">Adjective</button>  
+                <button class="button" onclick="ADV.writeExample();">Adverb</button>  
+                <button class="button" onclick="PREP.writeExample();">Preposition</button>  
+                <button class="button" onclick="CONJ.writeExample();">Conjunction</button>  
+                <button class="button" onclick="VERB.writeExample();">Verb</button>  
+                <button class="button" onclick="PRO.writeExample();">Pronoun</button>  
+                <button class="button" onclick="INT.writeExample();">Interjection</button> 
+                
+                <h5>Word Jobs</h5>
+                <button class="button" onclick="SUB.writeExample();">Subject</button>
+                <button class="button" onclick="DO.writeExample();">Direct Object</button>  
+                <button class="button" onclick="IO.writeExample();">Indirect Object</button>  
+                <button class="button" onclick="OP.writeExample();">Object of a Preposition</button>  
+                <button class="button" onclick="VERB.writeExample();">Verb</button>  
+                <button class="button" onclick="MOD.writeExample();">Modifier</button>  
+                <button class="button" onclick="PADJ.writeExample();">Predicate Adjective</button>  
+                <button class="button" onclick="PNOM.writeExample();">Predicate Nominative</button> 
             </div> 
  
         </div>
@@ -275,19 +191,8 @@ function findWord(word, commonArray)
 
 
         <!--footer--> 
-    <footer>2021 Copyright &copy; Sandra Chambers Assignments:
-        <a href="index.html"> Week 0 </a>
-        <a href="week1.html"> Week 1 </a>
-        <a href="week2.html"> Week 2 </a>
-        <a href="week3.html"> Week 3 </a>
-        <a href="week4.html"> Week 4 </a>
-        <a href="week5.html"> Week 5 </a>
-        <a href="week6.html"> Week 6 </a>
-        <a href="week7.html"> Week 7 </a>
-        <a href="week8.html"> Week 8 </a>
-        <a href="week9.html"> Week 9 </a>
-        <a href="week10.html"> Week 10 </a>
-        <a href="grammarHome.html"> Final Project </a>
+    <footer>2021 Copyright &copy; Sandra Chambers
+
     </footer>
   </body>
 </html>
